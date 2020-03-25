@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="pt-br"> <!-- idioma da pagina  -->
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Estilo da pagina  -->
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> <!-- CDN -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> <!-- CDN -->
+
+    <script src="dist/js/epoch.js"></script> <!-- arquivo js  -->
+    <link rel="stylesheet" type="text/css" href="dist/css/epoch.css">
+    <!--arquivo css  -->
+
+    <style>
+        .test .epoch {
+            width: 350px;
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grafico de Pizza</h1>
+
+    <div id="test" class="test">
+        <p>
+            Cada cor com seus valores:
+            <ul>
+                <li>A - 20</li>
+                <li>B - 45</li>
+                <li>C - 35</li>
+            </ul>
+        </p>
+
+        <div class="epoch">
+            <!-- aqui ficara o grafico -->
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#test .epoch').epoch({
+                type: 'pie',
+                data: [
+                    { label: 'A', value: 20 },
+                    { label: 'B', value: 45 },
+                    { label: 'C', value: 35 }
+                ]
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
